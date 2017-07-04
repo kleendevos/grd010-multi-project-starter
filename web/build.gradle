@@ -1,0 +1,18 @@
+plugins {
+    id 'org.akhikhl.gretty' version '1.4.2'
+    id 'war'
+}
+
+dependencies{
+    compile 'com.sun.faces:jsf-api:2.2.14'
+    compile 'com.sun.faces:jsf-impl:2.2.14'
+    compile 'org.primefaces:primefaces:6.0'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    
+    compile project (':domain')
+}
+
+gretty {
+    servletContainer = 'tomcat8' // 'jetty9'
+    httpPort = 8080
+}
