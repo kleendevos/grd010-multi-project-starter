@@ -1,6 +1,11 @@
 apply plugin: 'java'
-apply plugin: ''
+apply plugin: 'jacoco'
 
 dependencies {
     compile 'org.hibernate:hibernate-validator:5.4.1.Final'
 }
+
+test{
+}
+
+jacocoTestReport.dependsOn test
